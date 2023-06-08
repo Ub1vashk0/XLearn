@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:android="http://"
+             x:Class="XLearn.App">
+    <Application.Resources>
+
+        
+        <ResourceDictionary>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="TextColor">#C0C0C0</Color>
+            <Color x:Key="DetailColor">#606060</Color>
+            <Color x:Key="BackgroundColor">#202020</Color>
+            <Color x:Key="MainDetailColor">#6ba6ff</Color> 
+            
+            <Style x:Key="Ans" TargetType="Button">
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource DetailColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource DetailColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+                <Setter Property="FontSize" Value="22"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="BasedLabel">
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="TextStyle" BasedOn="{StaticResource BasedLabel}">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="HeaderText" BasedOn="{StaticResource BasedLabel}">
+                <Setter Property="TextColor" Value="{StaticResource MainDetailColor}"/>
+                <Setter Property="FontSize" Value="22"/>
+            </Style>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="Transparent" />
+                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}"/>
+            </Style>
+
+            <Style TargetType="Frame">
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="ThemeFrame">
+                <Setter Property="BackgroundColor" Value="{StaticResource DetailColor}"/>
+            </Style>
+
+            <Style TargetType="ProgressBar">
+                <Setter Property="BackgroundColor" Value="{StaticResource DetailColor}"/>
+                <Setter Property="ProgressColor" Value="{StaticResource MainDetailColor}"/>
+                <Setter Property="HeightRequest" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

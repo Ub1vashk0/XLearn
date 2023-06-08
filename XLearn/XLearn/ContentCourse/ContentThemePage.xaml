@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.ContentCourse.ContentThemePage"
+             xmlns:element ="clr-namespace:XLearn.ContentCourse">
+
+    <NavigationPage.TitleView>
+        <Label x:Name="TitleView" 
+               Style="{StaticResource HeaderText}" 
+               Text="Список підрозділів">
+        </Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="containerSubtheme" 
+                         Padding="10"
+                         Spacing="5">
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

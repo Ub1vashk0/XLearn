@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.ContentCourse.ContentSubThemePage"
+             xmlns:element ="clr-namespace:XLearn.ContentCourse"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <NavigationPage.TitleView>
+        <Label Style="{StaticResource HeaderText}" 
+               x:Name="NameTitle"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button" x:Key="NavigationButton">
+            <Setter Property="FontSize" Value="45"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="WidthRequest" Value="80"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto,*,auto"
+              ColumnDefinitions="*, auto"
+              Padding="15">
+            <ContentView Grid.Row="0"
+                         Grid.ColumnSpan="2">
+                <ProgressBar x:Name="progressBar"/>
+            </ContentView>
+            <StackLayout Grid.Row="1"
+                         Grid.ColumnSpan="2"
+                         x:Name="container">
+                
+            </StackLayout>
+            <Button x:Name="BackButton"
+                    Style="{StaticResource NavigationButton}" 
+                    Grid.Column="0" 
+                    HorizontalOptions="Start"
+                    Clicked="BackButton_Clicked"
+                    Text="〈"/>
+            <Button x:Name="NextButton" 
+                    Style="{StaticResource NavigationButton}"
+                    Grid.Column="1"
+                    Clicked="NextButton_Clicked"
+                    Text="〉"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

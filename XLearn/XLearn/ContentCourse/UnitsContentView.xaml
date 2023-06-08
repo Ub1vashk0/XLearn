@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.ContentCourse.UnitsContentView">
+
+    <ContentView.Resources>
+        <Style TargetType="Label" x:Key="ContentText" BasedOn="{StaticResource TextStyle}">
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="Coding">
+            <Setter Property="FontFamily" Value="CodeText"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </ContentView.Resources>
+    
+    <ContentView.Content>
+        <ScrollView>
+            <StackLayout x:Name="containerContent">
+                <Label Style="{StaticResource ContentText}"
+                       x:Name="PlaceText"/>
+                <Label Style="{StaticResource Coding}"
+                       x:Name="CodeListing"/>
+                <Image Margin="10"
+                       HorizontalOptions="Center"
+                       x:Name="ImageContainer"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

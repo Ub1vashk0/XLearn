@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.TestContent.TestPage"
+             xmlns:elements ="clr-namespace:XLearn.TestContent">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button" x:Key="NavigationButton">
+            <Setter Property="FontSize" Value="45"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="WidthRequest" Value="80"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+    </ContentPage.Resources>    
+    
+    <NavigationPage.TitleView>
+        <Label Style="{StaticResource HeaderText}" 
+               x:Name="NameTitle"></Label>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <Grid Padding="15"
+              RowDefinitions="auto, auto, *, auto">
+            <Label Grid.Row="0" 
+                   Style="{StaticResource TextStyle}"
+                   HorizontalOptions="Center"
+                   x:Name="IndexLabel"/>
+            <ProgressBar Grid.Row="1"
+                         Progress="0.05"
+                         x:Name="progress"/>
+            <StackLayout x:Name="container" 
+                         Grid.Row="2" />
+            <Button x:Name="NextButton"
+                    Grid.Row="3"
+                    Style="{StaticResource NavigationButton}"
+                    HorizontalOptions="End"
+                    IsVisible="false"
+                    Clicked="NextButton_Clicked"
+                    Text="〉"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.TestContent.QuestionFormView">
+    <ContentView.Resources>
+        <Style TargetType="Label" x:Key="QuestionText" BasedOn="{StaticResource BasedLabel}">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Margin" Value="0,15"/>
+        </Style>
+        <Style TargetType="Label" x:Key="Coding">
+            <Setter Property="FontFamily" Value="CodeText"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Ans">
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource DetailColor}"/>
+            <Setter Property="TextColor" Value="{StaticResource White}"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+    </ContentView.Resources>
+    
+  <ContentView.Content>
+        <Grid RowDefinitions="auto, 0.3*, *">
+            <Label Grid.Row="0" 
+                   Style="{StaticResource QuestionText}"
+                   x:Name="QuestionText"/>
+            <ScrollView Grid.Row="1">
+                <Label Style="{StaticResource Coding}" 
+                   x:Name="CodeListing" 
+                   IsVisible="False" />
+            </ScrollView >
+            <ScrollView Grid.Row="2">
+                <StackLayout Spacing="10"
+                             x:Name="AnswersContainer">
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+  </ContentView.Content>
+</ContentView>

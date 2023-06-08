@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.MainPage"
+             xmlns:el="clr-namespace:XLearn.ContentCourse"
+             BackgroundColor="{StaticResource BackgroundColor}">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Label Style="{StaticResource HeaderText}"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold">XLearn</Label>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Resources>
+        <Style TargetType="Button" x:Key="CourseButton">
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="Margin" Value="10"/>
+            
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="10">
+        <Frame BackgroundColor="Transparent"
+               BorderColor="{StaticResource MainDetailColor}" Padding="10"
+               Margin="0,15">
+            <Label Style="{StaticResource TextStyle}">Xamarin - це платформа для розробки мобільних додатків, яка дозволяє використовувати мову програмування C# та .NET для створення нативних додатків для операційних систем Android та iOS.</Label>
+        </Frame>
+        <Label Style="{StaticResource HeaderText}"
+               HorizontalOptions="Center"
+               Margin="0,30,0,0"
+               TextColor="{StaticResource White}"
+               Text="Курси"/>
+
+        <Button x:Name="IntroButton" 
+                Style="{StaticResource CourseButton}"
+                Clicked="IntroButton_Clicked"
+                Text="Вступ C#"/>
+        <Button x:Name="OOPButton"
+                Style="{StaticResource CourseButton}"
+                Clicked="OOPButton_Clicked"
+                Text="Основи ООП"/>
+        <Button x:Name="XAMLButton" 
+                Style="{StaticResource CourseButton}"
+                Clicked="XAMLButton_Clicked"
+                Text="Вступ SQLite"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.TestContent.ResultTest">
+    
+    <NavigationPage.TitleView>
+        <Label Style="{StaticResource HeaderText}"
+               x:Name="NameTitle"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="Text">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="0,10"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="ScoreText" BasedOn="{StaticResource Text}">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="50,10,0,0"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ThisButton">
+            <Setter Property="Margin" Value="30,50"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <Grid Padding="15" 
+              HorizontalOptions="Center" VerticalOptions="Center"
+              RowDefinitions="auto,auto,auto,auto,auto"
+              ColumnDefinitions="auto, auto">
+            <Label Style="{StaticResource HeaderText}"
+                   Grid.ColumnSpan="2"
+                   HorizontalTextAlignment="Center"
+                   x:Name="MessageText"/>
+            <Label Style="{StaticResource Text}"
+                   Grid.Row="1"
+                   Text="Кількість питань"/>
+            <Label Style="{StaticResource Text}" 
+                   Grid.Row="2"
+                   Text="Максимальний бал"/>
+            <Label Style="{StaticResource Text}" 
+                   Grid.Row="3"
+                   Text="Прохідний бал"/>
+            <Label Style="{StaticResource Text}"
+                   Grid.Row="4"
+                   FontAttributes="Bold"
+                   Text="РЕЗУЛЬТАТ"/>
+            <Label Style="{StaticResource ScoreText}"
+                   Grid.Row="1"
+                   x:Name="CountQuestion"/>
+            <Label Style="{StaticResource ScoreText}"
+                   Grid.Row="2"
+                   x:Name="MaxScore"/>
+            <Label Style="{StaticResource ScoreText}"
+                   Grid.Row="3"
+                   x:Name="PassingScore"/>
+            <Label Style="{StaticResource ScoreText}"
+                   Grid.Row="4"
+                   FontAttributes="Bold"
+                   x:Name="ResultScore"/>
+            <Button Style="{StaticResource ThisButton}"
+                    Grid.Row="5"
+                    Text="Вернутися до тем"
+                    x:Name="ExitButton"
+                    Clicked="ExitButton_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

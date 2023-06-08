@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XLearn.ContentCourse.ThemeView">
+    <ContentView.Resources>
+        <Style TargetType="Label" x:Key="ThemeHeader" BasedOn="{StaticResource HeaderText}">
+            <Setter Property="TextColor" Value="{StaticResource White}"/>
+        </Style>
+    </ContentView.Resources>
+
+    <Frame Style="{StaticResource ThemeFrame}" x:Name="ThisFrame">
+        <Grid ColumnDefinitions="*, 50">
+            <Label Style="{StaticResource ThemeHeader}" 
+                   x:Name="NameTitle"
+                   Grid.Column="0"/>
+            <Label Text="✔"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="20"
+                   Grid.Column="1"
+                   x:Name="Tick"/>
+
+        </Grid>
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+        </Frame.GestureRecognizers>
+    </Frame>
+</ContentView>
